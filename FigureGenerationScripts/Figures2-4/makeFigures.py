@@ -5,9 +5,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 all_stats = pd.read_csv('./AllStatistics_ForBoxplot_09_01_2024.csv', header=0)
-all_stats = all_stats.filter(['Authors','Total_Contacts','Reference_Genome', 'Cis_Contacts','Cis/Total'], axis=1)
 all_stats['Cis_Contacts'] = all_stats['Cis_Contacts'].astype(int)
-#all_stats['Cis/Total']=all_stats['Cis_Contacts']/all_stats['Total_Contacts']
+all_stats['Cis/Total']=all_stats['Cis_Contacts']/all_stats['Total_Contacts']
 dataset_names = list(set(all_stats['Authors'].tolist()))
 all_stats['Cis/Trans'] = ((all_stats['Cis_Contacts'])/(all_stats['Total_Contacts']-all_stats['Cis_Contacts'] + 0.0000000000001))
  
