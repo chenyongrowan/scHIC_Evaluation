@@ -1,2 +1,2 @@
-Go to https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129029[https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129029]
+Go to [https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129029](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129029)
 Download all supplemental files
