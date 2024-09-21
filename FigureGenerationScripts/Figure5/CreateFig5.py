@@ -47,13 +47,26 @@ for file in files:
             chromstarts.append(clr.extent(i)[0])
         cellType = file.split('_')[0]
         cellNum = file.split('_')[1]
+
+        if resolution == '50kb':
+            vmax = 10
+        elif resolution == '100kb':
+            vmax = 12
+        elif resolution == '250kb':
+            vmax = 15
+        elif resolution == '500kb':
+            vmax = 20
+        elif resolution == '1Mb':
+            vmax = 100   
+        else: 
+            print(f'{resolution} failed')
         
         # Plotting
         ax = axs[subplot_index // 5, subplot_index % 5]
         im = ax.matshow(
             clr.matrix(balance=False).fetch('chr1'),
             extent=(0, clr.chromsizes['chr1'], clr.chromsizes['chr1'], 0),
-            norm = LogNorm(),
+            norm = LogNorm(vmin=0.000000001, vmax=vmax),
             cmap='YlOrBr'
         )
         plt.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label='raw counts')
