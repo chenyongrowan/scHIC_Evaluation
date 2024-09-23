@@ -21,5 +21,6 @@ If you use this work, please reference our paper:
 
 
 
-## Overview - Figure 1
-[Insert reformatted Figure 1 here as an overview] 
+## Overview of Major Steps in the scHiC Workflow
+![](./FigureGenerationScripts/Fig1_scHiC_Workflow.png)
+__Figure 1.__ Overview of major steps in scHi-C (A) experiments, (B) data preprocessing, and (C) computational analysis.
